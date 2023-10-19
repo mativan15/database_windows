@@ -5,7 +5,7 @@
 using namespace std;
 void imprimir_tri (float var1, float var2, float col, int multiplo);
 void caratula(){
-	string universidad = "Universidad Catolica San PablOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo "; 
+	string universidad = "Universidad Catolica San Pablo "; 
 	string escuela = "Escuela Profesional de Ciencia de la Computacion I"; 
 	string curso ="Curso de Ciencia de la Computacion I"; 
 	string alumnos = "Alumnos: \nIvan Matthias Sardon Medina ";
