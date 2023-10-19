@@ -60,11 +60,11 @@ void instanciar_muestras(Producto array_libros[]){
 
 void print_tabla_libros(Producto array_libros[]){
 	system("cls");
-	cout << left << setw(30) << "Nombre" << left << setw(20) << "Descripcion" << left << setw(12) << "Nivel" << left << setw(15) << "Area" << left << setw(12) << "Grado" << left << setw(12) << "ISBN" << left << setw(12) << "Price" << left << setw(8) << "Stock" << endl;
+	cout << left << setw(30) << "Nombre" << left << setw(25) << "Descripcion" << left << setw(12) << "Nivel" << left << setw(12) << "Area" << left << setw(15) << "Grado" << left << setw(12) << "ISBN" << left << setw(12) << "Price" << left << setw(8) << "Stock" << endl;
 
     for (int i = 0; i < 4; i++){
         cout << left << setw(30) << array_libros[i].nombreLibro
-            << left << setw(20) << array_libros[i].descripcionLib 
+            << left << setw(25) << array_libros[i].descripcionLib 
 			<< left << setw(12) << array_libros[i].nivel
 			<< left << setw(15) << array_libros[i].area
 			<< left << setw(12) << array_libros[i].grado
@@ -137,10 +137,10 @@ void caratula(){
 void catalogo(Producto array_libros[]){
 	bool retro =true;
 	int op;
-    cout<<"\n\tcatalogo\n";
+
     print_tabla_libros(array_libros);
 	do{
-		
+		cout<<"catalogo";
 		cout << "\x1B[33;5;88m" << "\n\t1. Regresar" << "\x1B[m"<< "\n";
 		cout << "\x1B[38;5;46m" << "\n\tEscoger Opcion: " << "\x1B[m";
 		cin >> op;

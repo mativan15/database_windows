@@ -60,7 +60,7 @@ void instanciar_muestras(Producto array_libros[]){
 
 void print_tabla_libros(Producto array_libros[]){
 	system("cls");
-	cout << left << setw(30) << "Nombre" << left << setw(20) << "Descripcion" << left << setw(12) << "Nivel" << left << setw(15) << "Area" << left << setw(12) << "Grado" << left << setw(12) << "ISBN" << left << setw(12) << "Price" << left << setw(8) << "Stock" << endl;
+	cout << left << setw(30) << "Nombre" << left << setw(20) << "Descripcion" << left << setw(12) << "Nivel" << left << setw(12) << "Area" << left << setw(12) << "Grado" << left << setw(12) << "ISBN" << left << setw(12) << "Price" << left << setw(8) << "Stock" << endl;
 
     for (int i = 0; i < 4; i++){
         cout << left << setw(30) << array_libros[i].nombreLibro
