@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <string>
 #include "wa.h"
+#include "clase_pedidos.h"
+#include "clase_producto.h"
 using namespace std;
 
 void error_valor(){
@@ -237,8 +239,8 @@ void pantalla_start(Producto array_libros_has[], Producto array_libros_viv[], Pe
 		cout << "\x1B[1;97m" << "\n\t\t\t\t\tSales Management Dashboard - Santillana" << "\x1B[m \n";
 		cout<< "\x1B[1;97m" << "\n\tBienvenido" << "\x1B[m \n\n";
 		cout<< "\x1B[1;97m" << "\n\tPara comenzar, cree un usuario" << "\x1B[m \n";
-		string usuario="";
-		string contraseña="";
+		char usuario[64]="";
+		char contraseña[64]="";
 		cout<< "\tIngrese el nombre de usuario:  ";
 		cin>>usuario;
 		if (std::cin.fail()) { //comprabacion de erroes
@@ -255,7 +257,7 @@ void pantalla_start(Producto array_libros_has[], Producto array_libros_viv[], Pe
 		}
 }
 
-void menu(Producto array_libros_has[], Producto array_libros_viv[], string usuario, Pedido Pedido1){
+void menu(Producto array_libros_has[], Producto array_libros_viv[], char usuario[64], Pedido Pedido1){
 	bool repite = true;
 	int opcion;
 	bool repertirinicio = true;	
@@ -274,14 +276,12 @@ void menu(Producto array_libros_has[], Producto array_libros_viv[], string usuar
 		cin >> opcion;
 		
 		if (std::cin.fail() || (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4)) { //comprabacion de erroes
-			std::cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n"; 
-			std::cin.clear();           
-			std::cin.ignore(100, '\n');
+			error_valor();
 		} else {
 			switch (opcion){
 				case 1:
 					system("cls");
-					catalogo(array_libros_has, array_libros_viv);
+					catalogo(array_libros_has, array_libros_viv, Pedido1);
 					break;
 				   
 				case 2:
@@ -290,7 +290,7 @@ void menu(Producto array_libros_has[], Producto array_libros_viv[], string usuar
 					break;
 				case 3:
 					system("cls");
-					canales_de_venta();
+					canales_de_venta(array_libros_has, array_libros_viv,Pedido1);
 					break;
 
 				case 4:
@@ -303,11 +303,11 @@ void menu(Producto array_libros_has[], Producto array_libros_viv[], string usuar
 }
 	
 void caratula(){
-	string universidad = "UCSP "; 
-	string escuela = "Escuela Profesional de Ciencia de la Computacion I"; 
-	string curso ="Ciencia de la Computacion I"; 
-	string alumnos = "Alumnos: \nIvan Matthias Sardon Medina \nAnthony Huicho Perez";
-	string ciudad_año = "Arequipa 2023 - II";
+	char universidad[8] = "UCSP"; 
+	char escuela[64] = "Escuela Profesional de Ciencia de la Computacion I"; 
+	char curso[32] ="Ciencia de la Computacion I"; 
+	char alumnos[64] = "Alumnos: \nIvan Matthias Sardon Medina \nAnthony Huicho Perez";
+	char ciudad_año[32] = "Arequipa 2023 - II";
     cout << "\x1B[31;5;88m" << universidad<< "\x1B[m"<< "\n";
 	cout << "\x1B[1;97m" << escuela << "\x1B[m"<< "\n";
 	cout << curso << "\n";
@@ -315,9 +315,8 @@ void caratula(){
 	cout << ciudad_año << "\n"; 
 }
 
-void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
+void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1){
 	bool retro =true;
-	bool w =true;
 	int op;
 	system("cls");
 	cout<<"\n\tCatalogo\n";
@@ -327,10 +326,8 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
 	cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 	cin >> op;
 	if (std::cin.fail() || !(op >= 1 && op <=3)){
-		std::cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n"; 
-		std::cin.clear();           
-		std::cin.ignore(100, '\n');
-		catalogo(array_libros_has,array_libros_viv);
+		error_valor();
+		catalogo(array_libros_has,array_libros_viv, Pedido1);
 	}else{
 		switch (op){
 			case 1:
@@ -340,12 +337,12 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
 				do{
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
+					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
+					
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					if (std::cin.fail() || ((op != 1) && (op != 2))){
-						std::cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n"; 
-						std::cin.clear();           
-						std::cin.ignore(100, '\n');
+					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
+						error_valor();
 					} else {
 						switch (op){
 							case 1:
@@ -353,8 +350,12 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
 								break;
 							case 2:
 								retro = false;
-								catalogo(array_libros_has,array_libros_viv);
+								catalogo(array_libros_has,array_libros_viv, Pedido1);
 									
+								break;
+							case 3:
+								retro= false;
+								pedidos(array_libros_has, array_libros_viv, Pedido1);
 								break;
 						}
 					}
@@ -367,12 +368,11 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
 				do{
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
+					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					if (std::cin.fail() || ((op != 1) && (op != 2))){
-						std::cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n"; 
-						std::cin.clear();           
-						std::cin.ignore(100, '\n');
+					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
+						error_valor();
 					} else {
 						switch (op){
 							case 1:
@@ -380,8 +380,11 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[]){
 								break;
 							case 2:
 								retro = false;
-								catalogo(array_libros_has, array_libros_viv);
-									
+								catalogo(array_libros_has, array_libros_viv, Pedido1);
+								break;
+							case 3:
+								retro= false;
+								pedidos(array_libros_has, array_libros_viv, Pedido1);
 								break;
 						}
 					}
