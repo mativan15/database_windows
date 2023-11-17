@@ -10,7 +10,7 @@ Boleta::~Boleta() {
 }
 
 void Boleta::mostrarBoleta() {
-    cout << "Numero de boleta: " << numero_boleta << endl;
+    cout << "Número de boleta: " << numero_boleta << endl;
     mostrarVenta();
     
 }

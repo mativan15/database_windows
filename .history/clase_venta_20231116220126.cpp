@@ -3,7 +3,9 @@
 #include "clase_venta.h"
 using namespace std;
 
-Venta::Venta(Pedido &ped, int cant) {
+Venta::Venta(Pedido &, int) {
+   Pedido ped;
+   int cant{0};
    pedido = ped;
    cantidad = cant;
 }

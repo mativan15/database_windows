@@ -1,7 +1,7 @@
 #include "clase_boleta.h"
 using namespace std;
  
-Boleta::Boleta(Pedido ped, int cant, int num_b) : Venta(ped, cant) {
+Boleta::Boleta(Pedido* ped, int cant, int num_b) : Venta(ped, cant) {
     numero_boleta = num_b;
  }
 
@@ -10,7 +10,7 @@ Boleta::~Boleta() {
 }
 
 void Boleta::mostrarBoleta() {
-    cout << "Numero de boleta: " << numero_boleta << endl;
+    cout << "Número de boleta: " << numero_boleta << endl;
     mostrarVenta();
     
 }

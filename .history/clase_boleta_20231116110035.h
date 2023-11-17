@@ -10,7 +10,7 @@ class Boleta : public Venta {
 public:
     int numero_boleta;
 
-    Boleta(Pedido ped, int cant, int num_b);
+    Boleta(Pedido* ped, int cant, int num_b);
 
     ~Boleta();
 

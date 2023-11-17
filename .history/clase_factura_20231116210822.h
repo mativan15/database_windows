@@ -1,7 +1,7 @@
 //clase_factura.h
 #include <iostream>
 #include <iomanip>
-
+#include <cstring>
 #include "clase_pedidos.h"
 #include "clase_venta.h"
 #ifndef CLASE_FACTURA_H

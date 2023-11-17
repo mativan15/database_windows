@@ -11,8 +11,8 @@ using namespace std;
 void canales_de_venta(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1, Listas lista_has, Listas lista_viv){
 	bool retro =true;
 	int op;
-	//Pedido* ptr_pedido = &Pedido1;
-	Boleta boleta1(Pedido1, 12345, 11111);
+	Pedido* ptr_pedido = &Pedido1;
+	Boleta boleta1(ptr_pedido, 12345, 11111);
 	system("cls");
 	cout<<"\tCANALES DE VENTA\n"
 			<< "\x1B[33;5;88m" << "\n\tIngrese canal de venta" << "\x1B[m"<< "\n"

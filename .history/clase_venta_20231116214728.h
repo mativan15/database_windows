@@ -8,7 +8,7 @@ class Venta {
 public:
     Pedido pedido;
     int cantidad;
-    Venta(Pedido &, int);
+    Venta(Pedido &, int cant);
     void mostrarVenta();
 };
 

@@ -3,7 +3,7 @@
 #include "clase_venta.h"
 using namespace std;
 
-Venta::Venta(Pedido &ped, int cant) {
+Venta::Venta(Pedido ped, int cant) {
    pedido = ped;
    cantidad = cant;
 }
@@ -12,4 +12,4 @@ void Venta::mostrarVenta() {
    cout << "Datos del pedido:" << endl
       << "Cantidad " << cantidad << endl;
    pedido.print_pedido();
-}
+   }
