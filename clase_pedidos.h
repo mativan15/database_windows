@@ -5,20 +5,18 @@
 #define CLASE_PEDIDOS_H
 class Pedido {
 public:
-    char nombreCole[80];
-	char direccionCole[64];
-	char emailCole[64];
-	char nombreResp[64];
+    char* nombreCole;
+	char* direccionCole;
+	char* emailCole;
+	char* nombreResp;
 	int numTele;
     long long codigoCole;
     long long codigoRUC;
 	Pedido();
-    Pedido (char *nombreCole, char *direccionCole, char *emailCole, char *nombreResp, int num_tel, long long cod_col, long long cod_ruc);
+    Pedido (const char *nom_c, const char *dir_c, const char *email_c, const char *nombre_r, int num_tel, long long cod_col, long long cod_ruc);
     Pedido(const Pedido& copy);
-    void setnombreCole(char *nombreCole);
-    void setdireccionCole(char *direccionCole);
-    void setemailCole(char *emailCole);
-    void setnombreResp(char *nombreResp);
+	~Pedido();
+    void set_char2(char*& atributo, char param[50]);
     void print_pedido();
 };
 #endif

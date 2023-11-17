@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdexcept>
 #include <iomanip>
 #include <string>
 #include "wa.h"
@@ -15,10 +14,8 @@ void error_valor(){
 }
 void instanciar_muestras(Producto array_libros_has[], Producto array_libros_viv[]){
 	//has
-	
-	array_libros_has[0] = Producto("1234567890123", "Matematica - Crecemos J.", "Lib. Act.", "Primaria", 1, "Matematica", 69.9, 2349);
-	array_libros_viv[0] = Producto("1234501234309", "Lenguaje - Aprendemos", "Pack", "Secundaria", 5, "Lenguaje", 88.0, 1577);
-	/*array_libros_has[1] = Producto(2345678901234, "Ciencias Naturales - Aprendemos", "Lib. Tex.", "Primaria", 2, "Ciencias Naturales", 150.0, 1357);
+	array_libros_has[0] = Producto(1234567890123, "Matematica - Crecemos J.", "Lib. Act.", "Primaria", 1, "Matematica", 69.9, 2349);
+	array_libros_has[1] = Producto(2345678901234, "Ciencias Naturales - Aprendemos", "Lib. Tex.", "Primaria", 2, "Ciencias Naturales", 150.0, 1357);
 	array_libros_has[2] = Producto(3456789012345, "Lenguaje - Saber C.", "Lib. Tex.", "Secundaria", 3, "Lenguaje", 129.5, 1132);
 	array_libros_has[3] = Producto(4567890123456, "Geografia - Aprendemos", "Pack", "Primaria", 4, "Geografia", 60.0, 1598);
 	array_libros_has[4] = Producto(5678901234567, "Ciencias Naturales - Crecemos J.", "Pack", "Secundaria", 5, "Ciencias Naturales", 99.9, 1783);
@@ -119,6 +116,87 @@ void instanciar_muestras(Producto array_libros_has[], Producto array_libros_viv[
 	array_libros_has[99] = Producto(7890123456786, "Lenguaje - Crecemos J.", "Lib. Act.", "Primaria", 5, "Lenguaje", 73.9, 2047);	
 	
 	//vivos
+	array_libros_viv[0] = Producto(5432101234567, "Matematica - Aprendemos", "Pack", "Secundaria", 3, "Matematica", 99.0, 1747);
+	array_libros_viv[1] = Producto(9012345690876, "Ciencias Naturales - Saber C.", "Lib. Act.", "Primaria", 2, "Ciencias Naturales", 88.9, 1944);
+	array_libros_viv[2] = Producto(1234567890123, "Lenguaje - Estudio D.", "Pack", "Primaria", 1, "Lenguaje", 70.0, 1607);
+	array_libros_viv[3] = Producto(2345012345678, "Geografia - Aprendemos", "Pack", "Secundaria", 5, "Geografia", 112.0, 1627);
+	array_libros_viv[4] = Producto(4567890123098, "Matematica - Crecemos J.", "Lib. Tex.", "Primaria", 4, "Matematica", 83.0, 1692);
+	array_libros_viv[5] = Producto(5678901987654, "Lenguaje - Saber C.", "Lib. Tex.", "Secundaria", 3, "Lenguaje", 105.0, 1447);
+	array_libros_viv[6] = Producto(6789012378901, "Ciencias Naturales - Crecemos J.", "Lib. Act.", "Primaria", 2, "Ciencias Naturales", 75.0, 1972);
+	array_libros_viv[7] = Producto(7890123456789, "Geografia - Saber C.", "Lib. Act.", "Primaria", 1, "Geografia", 65.0, 1837);
+	array_libros_viv[8] = Producto(8901234901234, "Matematica - Estudio D.", "Pack", "Secundaria", 5, "Matematica", 119.9, 1422);
+	array_libros_viv[9] = Producto(4123456789901, "Lenguaje - Aprendemos", "Lib. Act.", "Secundaria", 4, "Lenguaje", 94.0, 1907);
+	array_libros_viv[10] = Producto(1234098765432, "Ciencias Naturales - Saber C.", "Pack", "Primaria", 3, "Ciencias Naturales", 81.0, 1282);
+	array_libros_viv[11] = Producto(9012345690212, "Geografia - Crecemos J.", "Pack", "Primaria", 2, "Geografia", 70.9, 1657);
+	array_libros_viv[12] = Producto(5678090123456, "Matematica - Aprendemos", "Lib. Tex.", "Secundaria", 1, "Matematica", 90.0, 1722);
+	array_libros_viv[13] = Producto(2345690123409, "Lenguaje - Estudio D.", "Pack", "Secundaria", 5, "Lenguaje", 110.0, 1347);
+	array_libros_viv[14] = Producto(5432109876098, "Ciencias Naturales - Saber C.", "Lib. Act.", "Primaria", 4, "Ciencias Naturales", 64.9, 1752);
+	array_libros_viv[15] = Producto(6789012345301, "Geografia - Crecemos J.", "Lib. Act.", "Primaria", 3, "Geografia", 88.0, 1837);
+	array_libros_viv[16] = Producto(9012345690765, "Matematica - Crecemos J.", "Lib. Tex.", "Secundaria", 2, "Matematica", 95.0, 1222);
+	array_libros_viv[17] = Producto(2345678123901, "Lenguaje - Aprendemos", "Lib. Tex.", "Secundaria", 1, "Lenguaje", 101.0, 1487);
+	array_libros_viv[18] = Producto(5432109823456, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 5, "Ciencias Naturales", 73.9, 1922);
+	array_libros_viv[19] = Producto(4567890123987, "Geografia - Crecemos J.", "Pack", "Secundaria", 4, "Geografia", 105.0, 1727);
+	array_libros_viv[20] = Producto(9012345612345, "Matematica - Saber C.", "Lib. Act.", "Primaria", 3, "Matematica", 85.0, 1247);
+	array_libros_viv[21] = Producto(1234501234309, "Lenguaje - Aprendemos", "Lib. Act.", "Primaria", 2, "Lenguaje", 87.0, 1432);
+	array_libros_viv[22] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Pack", "Secundaria", 5, "Ciencias Naturales", 105.0, 1307);
+	array_libros_viv[23] = Producto(5678901234501, "Geografia - Crecemos J.", "Pack", "Primaria", 4, "Geografia", 64.9, 1582);
+	array_libros_viv[24] = Producto(6789012345098, "Matematica - Saber C.", "Lib. Tex.", "Secundaria", 3, "Matematica", 75.0, 1747);
+	array_libros_viv[25] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Primaria", 2, "Lenguaje", 100.0, 1832);
+	array_libros_viv[26] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 1, "Ciencias Naturales", 79.0, 1247);
+	array_libros_viv[27] = Producto(1234501234309, "Geografia - Crecemos J.", "Lib. Act.", "Secundaria", 5, "Geografia", 109.0, 1442);
+	array_libros_viv[28] = Producto(9012345690012, "Matematica - Saber C.", "Pack", "Primaria", 4, "Matematica", 70.9, 1557);
+	array_libros_viv[29] = Producto(5678901234501, "Lenguaje - Aprendemos", "Lib. Tex.", "Secundaria", 3, "Lenguaje", 85.0, 1282);
+	array_libros_viv[30] = Producto(6789012345098, "Ciencias Naturales - Estudio D.", "Pack", "Primaria", 2, "Ciencias Naturales", 95.0, 1927);
+	array_libros_viv[31] = Producto(7890123456001, "Geografia - Crecemos J.", "Pack", "Secundaria", 1, "Geografia", 74.9, 1642);
+	array_libros_viv[32] = Producto(9012345612345, "Matematica - Saber C.", "Lib. Act.", "Primaria", 5, "Matematica", 80.0, 1457);
+	array_libros_viv[33] = Producto(1234501234309, "Lenguaje - Aprendemos", "Lib. Act.", "Secundaria", 4, "Lenguaje", 104.0, 1222);
+	array_libros_viv[34] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Lib. Tex.", "Secundaria", 3, "Ciencias Naturales", 75.0, 1597);
+	array_libros_viv[35] = Producto(5678901234501, "Geografia - Crecemos J.", "Lib. Act.", "Primaria", 2, "Geografia", 92.0, 1942);
+	array_libros_viv[36] = Producto(6789012345098, "Matematica - Saber C.", "Pack", "Primaria", 1, "Matematica", 67.9, 1707);
+	array_libros_viv[37] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Secundaria", 5, "Lenguaje", 88.0, 1542);
+	array_libros_viv[38] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Pack", "Primaria", 4, "Ciencias Naturales", 72.0, 1877);
+	array_libros_viv[39] = Producto(1234501234309, "Geografia - Crecemos J.", "Pack", "Secundaria", 3, "Geografia", 99.0, 1722);
+	array_libros_viv[40] = Producto(9012345690012, "Matematica - Saber C.", "Lib. Tex.", "Primaria", 2, "Matematica", 95.0, 1887);
+	array_libros_viv[41] = Producto(5678901234501, "Lenguaje - Aprendemos", "Lib. Act.", "Secundaria", 1, "Lenguaje", 104.0, 1752);
+	array_libros_viv[42] = Producto(6789012345098, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 5, "Ciencias Naturales", 69.9, 1747);
+	array_libros_viv[43] = Producto(7890123456001, "Geografia - Crecemos J.", "Lib. Tex.", "Secundaria", 4, "Geografia", 80.0, 1282);
+	array_libros_viv[44] = Producto(9012345612345, "Matematica - Saber C.", "Pack", "Primaria", 3, "Matematica", 100.0, 1927);
+	array_libros_viv[45] = Producto(1234501234309, "Lenguaje - Aprendemos", "Pack", "Secundaria", 2, "Lenguaje", 72.9, 1642);
+	array_libros_viv[46] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 1, "Ciencias Naturales", 73.0, 1457);
+	array_libros_viv[47] = Producto(5678901234501, "Geografia - Crecemos J.", "Lib. Act.", "Secundaria", 5, "Geografia", 98.0, 1222);
+	array_libros_viv[48] = Producto(6789012345098, "Matematica - Saber C.", "Lib. Tex.", "Primaria", 4, "Matematica", 65.9, 1997);
+	array_libros_viv[49] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Primaria", 3, "Lenguaje", 82.0, 1522);
+	array_libros_viv[50] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Pack", "Secundaria", 2, "Ciencias Naturales", 102.0, 1847);
+	array_libros_viv[51] = Producto(1234501234309, "Geografia - Crecemos J.", "Pack", "Primaria", 1, "Geografia", 74.0, 1582);
+	array_libros_viv[52] = Producto(9012345690012, "Matematica - Saber C.", "Lib. Act.", "Primaria", 5, "Matematica", 91.0, 1927);
+	array_libros_viv[53] = Producto(5678901234501, "Lenguaje - Aprendemos", "Lib. Act.", "Secundaria", 4, "Lenguaje", 74.9, 1942);
+	array_libros_viv[54] = Producto(6789012345098, "Ciencias Naturales - Estudio D.", "Lib. Tex.", "Primaria", 3, "Ciencias Naturales", 78.0, 1907);
+	array_libros_viv[55] = Producto(7890123456001, "Geografia - Crecemos J.", "Lib. Tex.", "Secundaria", 2, "Geografia", 101.0, 1742);
+	array_libros_viv[56] = Producto(9012345612345, "Matematica - Saber C.", "Pack", "Primaria", 1, "Matematica", 85.0, 1887);
+	array_libros_viv[57] = Producto(1234501234309, "Lenguaje - Aprendemos", "Pack", "Secundaria", 5, "Lenguaje", 98.0, 1282);
+	array_libros_viv[58] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 4, "Ciencias Naturales", 73.0, 1757);
+	array_libros_viv[59] = Producto(5678901234501, "Geografia - Crecemos J.", "Lib. Act.", "Secundaria", 3, "Geografia", 95.0, 1942);
+	array_libros_viv[60] = Producto(6789012345098, "Matematica - Saber C.", "Lib. Tex.", "Primaria", 2, "Matematica", 72.9, 1847);
+	array_libros_viv[61] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Primaria", 1, "Lenguaje", 74.0, 1602);
+	array_libros_viv[62] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Pack", "Secundaria", 5, "Ciencias Naturales", 95.0, 1477);
+	array_libros_viv[63] = Producto(1234501234309, "Geografia - Crecemos J.", "Pack", "Primaria", 4, "Geografia", 71.9, 1822);
+	array_libros_viv[64] = Producto(9012345690012, "Matematica - Saber C.", "Lib. Act.", "Primaria", 3, "Matematica", 68.0, 1847);
+	array_libros_viv[65] = Producto(5678901234501, "Lenguaje - Aprendemos", "Lib. Act.", "Secundaria", 2, "Lenguaje", 75.0, 1922);
+	array_libros_viv[66] = Producto(6789012345098, "Ciencias Naturales - Estudio D.", "Lib. Tex.", "Primaria", 1, "Ciencias Naturales", 99.0, 1577);
+	array_libros_viv[67] = Producto(7890123456001, "Geografia - Crecemos J.", "Lib. Tex.", "Secundaria", 5, "Geografia", 88.0, 1902);
+	array_libros_viv[68] = Producto(9012345612345, "Matematica - Saber C.", "Pack", "Primaria", 4, "Matematica", 102.0, 1587);
+	array_libros_viv[69] = Producto(1234501234309, "Lenguaje - Aprendemos", "Pack", "Secundaria", 3, "Lenguaje", 76.9, 1842);
+	array_libros_viv[70] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 2, "Ciencias Naturales", 95.0, 1927);
+	array_libros_viv[71] = Producto(5678901234501, "Geografia - Crecemos J.", "Lib. Act.", "Secundaria", 1, "Geografia", 80.0, 1557);
+	array_libros_viv[72] = Producto(6789012345098, "Matematica - Saber C.", "Lib. Tex.", "Primaria", 5, "Matematica", 71.9, 1822);
+	array_libros_viv[73] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Primaria", 4, "Lenguaje", 79.0, 1477);
+	array_libros_viv[74] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Pack", "Secundaria", 3, "Ciencias Naturales", 100.0, 1842);
+	array_libros_viv[75] = Producto(1234501234309, "Geografia - Crecemos J.", "Pack", "Primaria", 2, "Geografia", 68.9, 1757);
+	array_libros_viv[76] = Producto(9012345690012, "Matematica - Saber C.", "Lib. Act.", "Secundaria", 5, "Matematica", 92.0, 1922);
+	array_libros_viv[77] = Producto(5678901234501, "Lenguaje - Aprendemos", "Lib. Act.", "Primaria", 4, "Lenguaje", 74.9, 1947);
+	array_libros_viv[78] = Producto(6789012345098, "Ciencias Naturales - Estudio D.", "Lib. Tex.", "Primaria", 3, "Ciencias Naturales", 78.0, 1822);
+	array_libros_viv[79] = Producto(7890123456001, "Geografia - Crecemos J.", "Lib. Tex.", "Secundaria", 2, "Geografia", 75.0, 1907);
+	array_libros_viv[80] = Producto(9012345612345, "Matematica - Saber C.", "Pack", "Primaria", 1, "Matematica", 99.0, 1742);
 	array_libros_viv[81] = Producto(1234501234309, "Lenguaje - Aprendemos", "Pack", "Secundaria", 5, "Lenguaje", 88.0, 1577);
 	array_libros_viv[82] = Producto(9012345690012, "Ciencias Naturales - Estudio D.", "Lib. Act.", "Primaria", 4, "Ciencias Naturales", 69.9, 1902);
 	array_libros_viv[83] = Producto(5678901234501, "Geografia - Crecemos J.", "Pack", "Secundaria", 3, "Geografia", 101.0, 1827);
@@ -138,7 +216,7 @@ void instanciar_muestras(Producto array_libros_has[], Producto array_libros_viv[
 	array_libros_viv[97] = Producto(7890123456001, "Lenguaje - Aprendemos", "Lib. Tex.", "Primaria", 4, "Lenguaje", 71.9, 1702);
 	array_libros_viv[98] = Producto(9012345612345, "Ciencias Naturales - Estudio D.", "Pack", "Secundaria", 3, "Ciencias Naturales", 85.0, 1757);
 	array_libros_viv[99] = Producto(1234501234309, "Geografia - Crecemos J.", "Lib. Act.", "Primaria", 2, "Geografia", 78.0, 1922);
-*/
+
 }
 void print_tabla_libros(Producto array_libros[]){
 	//system("cls");
@@ -156,9 +234,9 @@ void print_tabla_libros(Producto array_libros[]){
     }
 }
 
-void pantalla_start(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1, Listas lista_has, Listas lista_viv){
+void pantalla_start(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1, Listas lista1){
 	bool r = true;
-	//system("cls");
+	system("cls");
 		cout << "\x1B[1;97m" << "\n\t\t\t\t\tSales Management Dashboard - Santillana" << "\x1B[m \n";
 		cout<< "\x1B[1;97m" << "\n\tBienvenido" << "\x1B[m \n\n";
 		cout<< "\x1B[1;97m" << "\n\tPara comenzar, cree un usuario" << "\x1B[m \n";
@@ -176,17 +254,17 @@ void pantalla_start(Producto array_libros_has[], Producto array_libros_viv[], Pe
 		}
 
 		if ((usuario!="") && (contraseña!="") ){
-			menu(array_libros_has, array_libros_viv ,usuario, Pedido1, lista_has, lista_viv);
+			menu(array_libros_has, array_libros_viv ,usuario, Pedido1, lista1);
 		}
 }
 
-void menu(Producto array_libros_has[], Producto array_libros_viv[], char usuario[64], Pedido Pedido1, Listas lista_has, Listas lista_viv){
+void menu(Producto array_libros_has[], Producto array_libros_viv[], char usuario[64], Pedido Pedido1, Listas lista1){
 	bool repite = true;
 	int opcion;
 	bool repertirinicio = true;	
 	
 	do {	
-		//system("cls");
+		system("cls");
 		cout << "\x1B[1;97m" << "\n\t\t\t\t\tSales Management Dashboard - Santillana" << "\x1B[m \n";
 		caratula();
 		cout << "\x1B[1;97m" << "\n\t\tBIENVENIDO, " << usuario << "\x1B[m \n";
@@ -204,16 +282,16 @@ void menu(Producto array_libros_has[], Producto array_libros_viv[], char usuario
 			switch (opcion){
 				case 1:
 					system("cls");
-					catalogo(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
+					catalogo(array_libros_has, array_libros_viv, Pedido1, lista1);
 					break;
 				   
 				case 2:
-					//system("cls");
-					pedidos(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
+					system("cls");
+					pedidos(array_libros_has, array_libros_viv, Pedido1, lista1);
 					break;
 				case 3:
 					system("cls");
-					canales_de_venta(array_libros_has, array_libros_viv,Pedido1, lista_has, lista_viv);
+					canales_de_venta(array_libros_has, array_libros_viv,Pedido1, lista1);
 					break;
 
 				case 4:
@@ -238,7 +316,7 @@ void caratula(){
 	cout << ciudad_año << "\n"; 
 }
 
-void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1, Listas lista_has, Listas lista_viv){
+void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido Pedido1, Listas lista1){
 	bool retro =true;
 	int op;
 	system("cls");
@@ -250,100 +328,69 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido P
 	cin >> op;
 	if (std::cin.fail() || !(op >= 1 && op <=3)){
 		error_valor();
-		catalogo(array_libros_has,array_libros_viv, Pedido1, lista_has, lista_viv);
+		catalogo(array_libros_has,array_libros_viv, Pedido1, lista1);
 	}else{
 		switch (op){
 			case 1:
 				system("cls");
 				cout << "\x1B[34m" << "\nCATALOGO Hasta agotar stock" << "\x1B[m"<< "\n\n";
-				//print_tabla_libros(array_libros_has);//catalogo HAS
-				cerr << "creacion objetos\n";
-				try {
-					lista_has.print_lista();
-				}
-					catch (invalid_argument& e) {
-					cerr << "Exception while initializing print_listaaa: " << e.what() << endl;
-				}
-				//lista_nos.print_lista();
-				//delete lista_has;
-				//cout << lista_has;
-				cerr << "\nprint objetos\n";
+				print_tabla_libros(array_libros_has);//catalogo HAS
+				lista1.print_lista();
 				do{
-					cerr << "print menu1\n";
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
-					cerr << "print menu2\n";
+					
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					cerr << "print menu3\n";
 					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
 						error_valor();
 					} else {
 						switch (op){
 							case 1:
 								retro= false;
-								menu(array_libros_has, array_libros_viv, "usuario", Pedido1, lista_has, lista_viv);
 								break;
 							case 2:
 								retro = false;
-								catalogo(array_libros_has,array_libros_viv, Pedido1, lista_has, lista_viv);
+								catalogo(array_libros_has,array_libros_viv, Pedido1, lista1);
 									
 								break;
 							case 3:
 								retro= false;
-								pedidos(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
+								pedidos(array_libros_has, array_libros_viv, Pedido1, lista1);
 								break;
 						}
 					}
 				}while(retro);
-				cerr << "fin de print menu\n";
 				break;
 			case 2:
 				system("cls");
-				cout << "\x1B[34m" << "\nCATALOGO vivo" << "\x1B[m"<< "\n\n";
-				//print_tabla_libros(array_libros_has);//catalogo HAS
-				cerr << "creacion objetos\n";
-				try {
-					lista_viv.print_lista();
-				}
-					catch (invalid_argument& e) {
-					cerr << "Exception while initializing print_listaaa: " << e.what() << endl;
-				}
-				//lista_nos.print_lista();
-				//delete lista_has;
-				//cout << lista_has;
-				cerr << "\nprint objetos\n";
+				cout << "\x1B[34m" << "\n\tCATALOGO Productos 'vivos'" << "\x1B[m"<< "\n\n";
+				print_tabla_libros(array_libros_viv);//catalogo HAS
 				do{
-					cerr << "print menu1\n";
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
-					cerr << "print menu2\n";
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					cerr << "print menu3\n";
 					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
 						error_valor();
 					} else {
 						switch (op){
 							case 1:
 								retro= false;
-								menu(array_libros_has, array_libros_viv ,"usuario", Pedido1, lista_has, lista_viv);
 								break;
 							case 2:
 								retro = false;
-								catalogo(array_libros_has,array_libros_viv, Pedido1, lista_has, lista_viv);
-									
+								catalogo(array_libros_has, array_libros_viv, Pedido1, lista1);
 								break;
 							case 3:
 								retro= false;
-								pedidos(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
+								pedidos(array_libros_has, array_libros_viv, Pedido1, lista1);
 								break;
 						}
 					}
 				}while(retro);
-				cerr << "fin de print menu\n";
 				break;
 			case 3: 
 				retro=false;

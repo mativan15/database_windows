@@ -4,21 +4,21 @@
 #define CLASE_PRODUCTO_H
 
 class Producto {
+//private:
 public:
-    char nombreLibro[50];
-	char descripcionLib[100];
-	char nivel[20];
-	char area[20];
+    char* codigoISBN;
+    char* nombreLibro;
+	char* descripcionLib;
+	char* nivel;
+	char* area;
 	int grado;
-    long long codigoISBN;
     float precio;
     int stock;
+public:
 	Producto();
-    Producto(long long cod_l, char *nom_l, char *desc_l, char *niv_l, int grad_l, char *area_l, float pre_l, int sto_l);
+    Producto(const char *cod_l, const char *nom_l, const char *desc_l, const char *niv_l, int grad_l, const char *area_l, float pre_l, int sto_l);
     Producto(const Producto& copy);
-    void setnombreLibro(char *nom_l);
-    void setdescripcionLib(char *desc_l);
-    void setnivel(char *niv_l);
-    void setarea(char *area_l);
+	~Producto();
+    void set_char(char*& atributo, const char *char_parametro);
 };
 #endif

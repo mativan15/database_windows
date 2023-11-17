@@ -1,63 +1,57 @@
 #include "clase_producto.h"
-
+#include "wa.h"
+#include <iostream>
+#include <stdexcept>
+using namespace std;
 Producto::Producto() {
-    codigoISBN = 0;
-    nombreLibro[0] = '\0';
-    descripcionLib[0] = '\0';
-    nivel[0] = '\0';
+    codigoISBN = nullptr;
+    nombreLibro = nullptr;
+    descripcionLib = nullptr;
+    nivel = nullptr;
 	grado = 0;
-    area[0] = '\0';
+    area = nullptr;
     precio = 0;
     stock = 0;
 }
-Producto::Producto(long long cod_l, char *nom_l, char *desc_l, char *niv_l, int grad_l, char *area_l, float pre_l, int sto_l) {
-    codigoISBN = cod_l;
-    setnombreLibro(nom_l);
-    setdescripcionLib(desc_l);
-    setnivel(niv_l);
+Producto::Producto(const char *cod_l, const char *nom_l , const char *desc_l, const char *niv_l, int grad_l, const char *area_l, float pre_l, int sto_l) {
+    set_char(codigoISBN, cod_l);
+    set_char(nombreLibro, nom_l);
+    set_char(descripcionLib, desc_l);
+    set_char(nivel, niv_l);
     grado = grad_l;
-    setarea(area_l);
+    set_char(area, area_l);
     precio = pre_l;
     stock = sto_l;
 }
 Producto::Producto(const Producto& copy) {
-    codigoISBN = copy.codigoISBN;
+    //codigoISBN = copy.codigoISBN;
 
     grado = copy.grado;
 
     precio = copy.precio;
     stock = copy.stock;
 }
+Producto::~Producto(){
+	/*delete []codigoISBN;
+    cerr << "codigo eliminado xd" << endl;
+    delete []nombreLibro;
+    cerr << "nimbre eliminado xd" << endl;*/
+}
 
-void Producto::setnombreLibro(char *nom_l) {
-    for (int i; i<50; i++) {
-        nombreLibro[i] = nom_l[i];
-        if (nom_l[i] == '\0') {
-            break;
-        }
+void Producto::set_char(char*& atributo, const char *char_parametro) {
+	//cerr << "no se pudo asignar char xd" << endl;
+    int largo{0};
+    while (char_parametro[largo] != '\0'){
+        largo++;
     }
-}
-void Producto::setdescripcionLib(char *desc_l) {
-    for (int i; i<50; i++) {
-        descripcionLib[i] = desc_l[i];
-        if (desc_l[i] == '\0') {
-            break;
-        }
+    cerr << largo << endl;
+    atributo = new char[largo + 1];
+    if (!atributo) {
+        cerr << "no se pudo asignar memoria xd" << endl;
     }
-}
-void Producto::setnivel(char *niv_l) {
-    for (int i; i<50; i++) {
-        nivel[i] = niv_l[i];
-        if (niv_l[i] == '\0') {
-            break;
-        }
+    for (int i = 0; i < largo; i++) {
+        atributo[i] = char_parametro[i];
     }
-}
-void Producto::setarea(char *area_l) {
-    for (int i; i<50; i++) {
-        area[i] = area_l[i];
-        if (area_l[i] == '\0') {
-            break;
-        }
-    }
+
+    atributo[largo] = '\0'; 
 }

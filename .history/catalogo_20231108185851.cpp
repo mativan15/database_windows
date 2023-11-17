@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdexcept>
 #include <iomanip>
 #include <string>
 #include "wa.h"
@@ -208,7 +207,7 @@ void menu(Producto array_libros_has[], Producto array_libros_viv[], char usuario
 					break;
 				   
 				case 2:
-					//system("cls");
+					system("cls");
 					pedidos(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
 					break;
 				case 3:
@@ -256,34 +255,21 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido P
 			case 1:
 				system("cls");
 				cout << "\x1B[34m" << "\nCATALOGO Hasta agotar stock" << "\x1B[m"<< "\n\n";
-				//print_tabla_libros(array_libros_has);//catalogo HAS
-				cerr << "creacion objetos\n";
-				try {
-					lista_has.print_lista();
-				}
-					catch (invalid_argument& e) {
-					cerr << "Exception while initializing print_listaaa: " << e.what() << endl;
-				}
-				//lista_nos.print_lista();
-				//delete lista_has;
-				//cout << lista_has;
-				cerr << "\nprint objetos\n";
+				print_tabla_libros(array_libros_has);//catalogo HAS
+				lista_has.print_lista();
 				do{
-					cerr << "print menu1\n";
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
-					cerr << "print menu2\n";
+					
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					cerr << "print menu3\n";
 					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
 						error_valor();
 					} else {
 						switch (op){
 							case 1:
 								retro= false;
-								menu(array_libros_has, array_libros_viv, "usuario", Pedido1, lista_has, lista_viv);
 								break;
 							case 2:
 								retro = false;
@@ -297,44 +283,27 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido P
 						}
 					}
 				}while(retro);
-				cerr << "fin de print menu\n";
 				break;
 			case 2:
 				system("cls");
-				cout << "\x1B[34m" << "\nCATALOGO vivo" << "\x1B[m"<< "\n\n";
-				//print_tabla_libros(array_libros_has);//catalogo HAS
-				cerr << "creacion objetos\n";
-				try {
-					lista_viv.print_lista();
-				}
-					catch (invalid_argument& e) {
-					cerr << "Exception while initializing print_listaaa: " << e.what() << endl;
-				}
-				//lista_nos.print_lista();
-				//delete lista_has;
-				//cout << lista_has;
-				cerr << "\nprint objetos\n";
+				cout << "\x1B[34m" << "\n\tCATALOGO Productos 'vivos'" << "\x1B[m"<< "\n\n";
+				print_tabla_libros(array_libros_viv);//catalogo HAS
 				do{
-					cerr << "print menu1\n";
 					cout << "\x1B[34m" << "\n\t1. Regresar al Menu" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t2. Regresar a Catalogo" << "\x1B[m"<< "\n";
 					cout << "\x1B[34m" << "\n\t3. Ir a Pedidos" << "\x1B[m"<< "\n";
-					cerr << "print menu2\n";
 					cout << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
 					cin >> op;
-					cerr << "print menu3\n";
 					if (std::cin.fail() || ((op != 1) && (op != 2) && (op != 3))){
 						error_valor();
 					} else {
 						switch (op){
 							case 1:
 								retro= false;
-								menu(array_libros_has, array_libros_viv ,"usuario", Pedido1, lista_has, lista_viv);
 								break;
 							case 2:
 								retro = false;
-								catalogo(array_libros_has,array_libros_viv, Pedido1, lista_has, lista_viv);
-									
+								catalogo(array_libros_has, array_libros_viv, Pedido1, lista_has, lista_viv);
 								break;
 							case 3:
 								retro= false;
@@ -343,7 +312,6 @@ void catalogo(Producto array_libros_has[], Producto array_libros_viv[], Pedido P
 						}
 					}
 				}while(retro);
-				cerr << "fin de print menu\n";
 				break;
 			case 3: 
 				retro=false;

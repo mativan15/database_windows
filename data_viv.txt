@@ -1,0 +1,80 @@
+5432101234567, vivooMatematica - Aprendemos, Pack, Secundaria, 3, Matematica, 99.0, 1747
+9012345690876, Ciencias Naturales - Saber C., Lib. Act., Primaria, 2, Ciencias Naturales, 88.9, 1944
+1234567890123, Lenguaje - Estudio D., Pack, Primaria, 1, Lenguaje, 70.0, 1607
+2345012345678, Geografia - Aprendemos, Pack, Secundaria, 5, Geografia, 112.0, 1627
+4567890123098, Matematica - Crecemos J., Lib. Tex., Primaria, 4, Matematica, 83.0, 1692
+5678901987654, Lenguaje - Saber C., Lib. Tex., Secundaria, 3, Lenguaje, 105.0, 1447
+6789012378901, Ciencias Naturales - Crecemos J., Lib. Act., Primaria, 2, Ciencias Naturales, 75.0, 1972
+7890123456789, Geografia - Saber C., Lib. Act., Primaria, 1, Geografia, 65.0, 1837
+8901234901234, Matematica - Estudio D., Pack, Secundaria, 5, Matematica, 119.9, 1422
+0123456789901, Lenguaje - Aprendemos, Lib. Act., Secundaria, 4, Lenguaje, 94.0, 1907
+1234098765432, Ciencias Naturales - Saber C., Pack, Primaria, 3, Ciencias Naturales, 81.0, 1282
+9012345690212, Geografia - Crecemos J., Pack, Primaria, 2, Geografia, 70.9, 1657
+5678090123456, Matematica - Aprendemos, Lib. Tex., Secundaria, 1, Matematica, 90.0, 1722
+2345690123409, Lenguaje - Estudio D., Pack, Secundaria, 5, Lenguaje, 110.0, 1347
+5432109876098, Ciencias Naturales - Saber C., Lib. Act., Primaria, 4, Ciencias Naturales, 64.9, 1752
+6789012345301, Geografia - Crecemos J., Lib. Act., Primaria, 3, Geografia, 88.0, 1837
+9012345690765, Matematica - Crecemos J., Lib. Tex., Secundaria, 2, Matematica, 95.0, 1222
+2345678123901, Lenguaje - Aprendemos, Lib. Tex., Secundaria, 1, Lenguaje, 101.0, 1487
+5432109823456, Ciencias Naturales - Estudio D., Lib. Act., Primaria, 5, Ciencias Naturales, 73.9, 1922
+4567890123987, Geografia - Crecemos J., Pack, Secundaria, 4, Geografia, 105.0, 1727
+9012345612345, Matematica - Saber C., Lib. Act., Primaria, 3, Matematica, 85.0, 1247
+1234501234309, Lenguaje - Aprendemos, Lib. Act., Primaria, 2, Lenguaje, 87.0, 1432
+9012345690012, Ciencias Naturales - Estudio D., Pack, Secundaria, 5, Ciencias Naturales, 105.0, 1307
+5678901234501, Geografia - Crecemos J., Pack, Primaria, 4, Geografia, 64.9, 1582
+6789012345098, Matematica - Saber C., Lib. Tex., Secundaria, 3, Matematica, 75.0, 1747
+7890123456001, Lenguaje - Aprendemos, Lib. Tex., Primaria, 2, Lenguaje, 100.0, 1832
+9012345612345, Ciencias Naturales - Estudio D., Lib. Act., Primaria, 1, Ciencias Naturales, 79.0, 1247
+1234501234309, Geografia - Crecemos J., Lib. Act., Secundaria, 5, Geografia, 109.0, 1442
+9012345690012, Matematica - Saber C., Pack, Primaria, 4, Matematica, 70.9, 1557
+5678901234501, Lenguaje - Aprendemos, Lib. Tex., Secundaria, 3, Lenguaje, 85.0, 1282
+6789012345098, Ciencias Naturales - Estudio D., Pack, Primaria, 2, Ciencias Naturales, 95.0, 1927
+7890123456001, Geografia - Crecemos J., Pack, Secundaria, 1, Geografia, 74.9, 1642
+9012345612345, Matematica - Saber C., Lib. Act., Primaria, 5, Matematica, 80.0, 1457
+1234501234309, Lenguaje - Aprendemos, Lib. Act., Secundaria, 4, Lenguaje, 104.0, 1222
+9012345690012, Ciencias Naturales - Estudio D., Lib. Tex., Secundaria, 3, Ciencias Naturales, 75.0, 1597
+5678901234501, Geografia - Crecemos J., Lib. Act., Primaria, 2, Geografia, 92.0, 1942
+6789012345098, Matematica - Saber C., Pack, Primaria, 1, Matematica, 67.9, 1707
+7890123456001, Lenguaje - Aprendemos, Lib. Tex., Secundaria, 5, Lenguaje, 88.0, 1542
+9012345612345, Ciencias Naturales - Estudio D., Pack, Primaria, 4, Ciencias Naturales, 72.0, 1877
+1234501234309, Geografia - Crecemos J., Pack, Secundaria, 3, Geografia, 99.0, 1722
+9012345690012, Matematica - Saber C., Lib. Tex., Primaria, 2, Matematica, 95.0, 1887
+5678901234501, Lenguaje - Aprendemos, Lib. Act., Secundaria, 1, Lenguaje, 104.0, 1752
+6789012345098, Ciencias Naturales - Estudio D., Lib. Act., Primaria, 5, Ciencias Naturales, 69.9, 1747
+7890123456001, Geografia - Crecemos J., Lib. Tex., Secundaria, 4, Geografia, 80.0, 1282
+9012345612345, Matematica - Saber C., Pack, Primaria, 3, Matematica, 100.0, 1927
+1234501234309, Lenguaje - Aprendemos, Pack, Secundaria, 2, Lenguaje, 72.9, 1642
+9012345690012, Ciencias Naturales - Estudio D., Lib. Act., Primaria, 1, Ciencias Naturales, 73.0, 1457
+5678901234501, Geografia - Crecemos J., Lib. Act., Secundaria, 5, Geografia, 98.0, 1222
+6789012345098, Matematica - Saber C., Lib. Tex., Primaria, 4, Matematica, 65.9, 1997
+7890123456001, Lenguaje - Aprendemos, Lib. Tex., Primaria, 3, Lenguaje, 82.0, 1522
+9012345612345, Ciencias Naturales - Estudio D., Pack, Secundaria, 2, Ciencias Naturales, 102.0, 1847
+1234501234309, Geografia - Crecemos J., Pack, Primaria, 1, Geografia, 74.0, 1582
+9012345690012, Matematica - Saber C., Lib. Act., Primaria, 5, Matematica, 91.0, 1927
+5678901234501, Lenguaje - Aprendemos, Lib. Act., Secundaria, 4, Lenguaje, 74.9, 1942
+6789012345098, Ciencias Naturales - Estudio D., Lib. Tex., Primaria, 3, Ciencias Naturales, 78.0, 1907
+7890123456001, Geografia - Crecemos J., Lib. Tex., Secundaria, 2, Geografia, 101.0, 1742
+9012345612345, Matematica - Saber C., Pack, Primaria, 1, Matematica, 85.0, 1887
+1234501234309, Lenguaje - Aprendemos, Pack, Secundaria, 5, Lenguaje, 98.0, 1282
+9012345690012, Ciencias Naturales - Estudio D., Lib. Act., Primaria, 4, Ciencias Naturales, 73.0, 1757
+5678901234501, Geografia - Crecemos J., Lib. Act., Secundaria, 3, Geografia, 95.0, 1942
+6789012345098, Matematica - Saber C., Lib. Tex., Primaria, 2, Matematica, 72.9, 1847
+7890123456001, Lenguaje - Aprendemos, Lib. Tex., Primaria, 1, Lenguaje, 74.0, 1602
+9012345612345, Ciencias Naturales - Estudio D., Pack, Secundaria, 5, Ciencias Naturales, 95.0, 1477
+1234501234309, Geografia - Crecemos J., Pack, Primaria, 4, Geografia, 71.9, 1822
+9012345690012, Matematica - Saber C., Lib. Act., Primaria, 3, Matematica, 68.0, 1847
+5678901234501, Lenguaje - Aprendemos, Lib. Act., Secundaria, 2, Lenguaje, 75.0, 1922
+6789012345098, Ciencias Naturales - Estudio D., Lib. Tex., Primaria, 1, Ciencias Naturales, 99.0, 1577
+7890123456001, Geografia - Crecemos J., Lib. Tex., Secundaria, 5, Geografia, 88.0, 1902
+9012345612345, Matematica - Saber C., Pack, Primaria, 4, Matematica, 102.0, 1587
+1234501234309, Lenguaje - Aprendemos, Pack, Secundaria, 3, Lenguaje, 76.9, 1842
+9012345690123, Geografia - Aprendemos,Lib. Tex.,Secundaria,3,Geografia,76.0,1947
+4567812304567, Lenguaje - Crecemos J.,Lib. Act.,Secundaria,2,Lenguaje,124.9,1122
+1230456789012, Matematica - Crecemos J.,Lib. Act.,Primaria,1,Matematica,64.5,2267
+5432109876543, Ciencias Naturales - Aprendemos,Pack,Secundaria,5,Ciencias Naturales,129.0,1776
+2345123401234, Lenguaje - Estudio D.,Lib. Tex.,Primaria,4,Lenguaje,87.0,1175
+7890123456098, Geografia - Saber C.,Pack,Secundaria,3,Geografia,60.0,1839
+4567812304512, Matematica - Estudio D.,Lib. Act.,Primaria,5,Matematica,130.0,2352
+9012345690876, Ciencias Naturales - Saber C.,Pack,Secundaria,1,Ciencias Naturales,72.0,1096
+5432165987654, Lenguaje - Aprendemos,Lib. Act.,Secundaria,4,Lenguaje,139.0,1591
+9123456789965, Geografia - Crecemos J.,Lib. Tex.,Primaria,2,Geografia,87.5,2437
