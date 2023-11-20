@@ -1,0 +1,5 @@
+1134567890123,has Holaa.,Lib. Act.,Primaria,1,Matematica,69.9,2349
+2345678901234,Ciencias Naturales - Aprendemos,Lib. Tex.,Primaria,2,Ciencias Naturales,150.0,1357
+3456789012345,Lenguaje - Saber C.,Lib. Tex.,Secundaria,3,Lenguaje,129.5,1132
+4567890123456,Geografia - Aprendemos,Pack,Primaria,4,Geografia,60.0,1598
+5678901234567,Ciencias Naturales - Crecemos J.,Pack,Secundaria,5,Ciencias Naturales,99.9,1783

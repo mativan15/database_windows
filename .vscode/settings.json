@@ -1,6 +1,12 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "stdexcept": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp"
     }
 }
