@@ -1,8 +1,0 @@
-5432101234567, vivooMatematica - Aprendemos, Pack, Secundaria, 3, Matematica, 99.0, 1747
-9012345690876, Ciencias Naturales - Saber C., Lib. Act., Primaria, 2, Ciencias Naturales, 88.9, 1944
-1234567890123, Lenguaje - Estudio D., Pack, Primaria, 1, Lenguaje, 70.0, 1607
-2345012345678, Geografia - Aprendemos, Pack, Secundaria, 5, Geografia, 112.0, 1627
-4567890123098, Matematica - Crecemos J., Lib. Tex., Primaria, 4, Matematica, 83.0, 1692
-5678901987654, Lenguaje - Saber C., Lib. Tex., Secundaria, 3, Lenguaje, 105.0, 1447
-6789012378901, Ciencias Naturales - Crecemos J., Lib. Act., Primaria, 2, Ciencias Naturales, 75.0, 1972
-7890123456789, Geografia - Saber C., Lib. Act., Primaria, 1, Geografia, 65.0, 1837
