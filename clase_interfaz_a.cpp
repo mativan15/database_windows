@@ -7,13 +7,10 @@
 #include "clase_catalogo.h"
 #include "clase_canales_v.h"
 
-InterfazAdmin::InterfazAdmin() : InterfazV() {
-    
-}
+InterfazAdmin::InterfazAdmin() : InterfazV() {}
 
 InterfazAdmin::InterfazAdmin(Catalogo& catalogo1, Pedido& pedido, CanalesV& canales1, Listas& listaHas, Listas& listaViv, Usuario& usuario)
     : InterfazV(catalogo1, pedido, canales1, listaHas, listaViv, usuario) {
-    
 }
 
 void InterfazAdmin::menu() {
