@@ -1,8 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include "header1.h"
-#include "c_usuario.h"
-#include "c_listas.h"
+#include "clase_usuario.h"
+#include "clase_listas.h"
 int main(){
 	Usuario usuario1;
 	Listas lista_has(1);

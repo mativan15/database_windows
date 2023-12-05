@@ -1,16 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include "c_pedidos.h"
-#include "c_venta.h"
-#include "c_producto.h"
-#include "c_listas.h"
-#include "c_interfaz_v.h"
-#include "c_usuario.h"
-#include "c_interfaz_a.h"
-#include "c_catalogo.h"
-#include "c_canales_v.h"
-#include "c_boleta.h"
-#include "c_factura.h"
+#include "clase_pedidos.h"
+#include "clase_venta.h"
+#include "clase_producto.h"
+#include "clase_listas.h"
+#include "clase_interfaz_v.h"
+#include "clase_usuario.h"
+#include "clase_interfaz_a.h"
+#include "clase_catalogo.h"
+#include "clase_canales_v.h"
+#include "clase_boleta.h"
+#include "clase_factura.h"
 using namespace std;
 void error_valor(){
     cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n\n"; 
@@ -76,6 +76,8 @@ void pantalla_start(bool skip, Listas& lista_has, Listas& lista_viv, Usuario& us
 	}
 		//if -> admin o vendedor?{ 
 	if ((usuario!="") && (contrasena!="") ){
+
+
 		Pedido Pedido1(lista_has, lista_viv, usuario1);
 		Catalogo catalogo1(lista_has, lista_viv, usuario1);
 		CanalesV canales1(lista_has, lista_viv, usuario1);
@@ -86,16 +88,14 @@ void pantalla_start(bool skip, Listas& lista_has, Listas& lista_viv, Usuario& us
 		canales1.set_pedidoPtr(&Pedido1);
 		canales1.set_catalogoPtr(&catalogo1);
 		InterfazAdmin admin1(catalogo1, Pedido1, canales1, lista_has, lista_viv, usuario1);
-		InterfazVendedor vendedor1(catalogo1, Pedido1, canales1, lista_has, lista_viv, usuario1);
-		Interfaz* interfazPtr;
+		InterfazV vendedor1(catalogo1, Pedido1, canales1, lista_has, lista_viv, usuario1);
 		if (usuario1.contrasena[0] == 'a') {
 			system("cls");
-			interfazPtr = &admin1;
+			admin1.menu();
 		} else {		
 			system("cls");
-			interfazPtr = &vendedor1;
+			vendedor1.menu();
 		}
-		interfazPtr->menu();
 	} else {
 		cout << "\nUsuario y contraseña nulos no permitidos" << "\x1B[m \n";
 	}

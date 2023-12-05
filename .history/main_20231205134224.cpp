@@ -1,8 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include "header1.h"
-#include "c_usuario.h"
-#include "c_listas.h"
+#include "clase_usuario.h"
+#include "clase_pedidos.h"
+#include "clase_listas.h"
+#include "clase_interfaz_a.h"
+#include "clase_interfaz_v.h"
 int main(){
 	Usuario usuario1;
 	Listas lista_has(1);

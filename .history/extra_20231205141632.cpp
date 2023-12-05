@@ -1,16 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include "c_pedidos.h"
-#include "c_venta.h"
-#include "c_producto.h"
-#include "c_listas.h"
-#include "c_interfaz_v.h"
-#include "c_usuario.h"
-#include "c_interfaz_a.h"
-#include "c_catalogo.h"
-#include "c_canales_v.h"
-#include "c_boleta.h"
-#include "c_factura.h"
+#include "clase_pedidos.h"
+#include "clase_venta.h"
+#include "clase_producto.h"
+#include "clase_listas.h"
+#include "clase_interfaz_v.h"
+#include "clase_usuario.h"
+#include "clase_interfaz_a.h"
+#include "clase_catalogo.h"
+#include "clase_canales_v.h"
+#include "clase_boleta.h"
+#include "clase_factura.h"
 using namespace std;
 void error_valor(){
     cout << "\nValor incorrecto!!! Ingrese una opcion valida:\n\n"; 
