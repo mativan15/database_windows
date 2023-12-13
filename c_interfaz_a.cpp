@@ -1,4 +1,5 @@
 // InterfazAdmin.cpp
+#include <fstream>
 #include "c_interfaz_a.h"
 #include "c_listas.h"
 #include "c_usuario.h"
@@ -15,20 +16,20 @@ void InterfazAdmin::menu() {
 	int opcion;
 	system("cls");
     do {	
-        cout << "\x1B[1;97m" << "\n\t\t\t\t\t\tADMIN MODE" << "\x1B[m \n"
+        cout << "\x1B[31m" << "\n\t\t\t\t\t\tADMIN MODE" << "\x1B[m \n"
 		     << "\x1B[1;97m" << "\n\t\t\t\t\tSales Management Dashboard - Santillana" << "\x1B[m \n";
 		caratula();
-		cout << "\x1B[1;97m" << "\n\t\tBIENVENIDO, " << usuario1.nombre << "\x1B[m \n"
-		     << "\x1B[1;97m" << "\n\tMENU" << "\x1B[m \n"
-		     << "\x1B[1;97m" << "\n\t1. Catalogo" << "\x1B[m"<< "\n"
-		     << "\x1B[1;97m" << "\n\t2. Pedidos" << "\x1B[m"<< "\n"
-		     << "\x1B[1;97m" << "\n\t3. Canales de venta" << "\x1B[m"<< "\n"
-             << "\x1B[1;97m" << "\n\t4. FUNCIONES ADMIN" << "\x1B[m"<< "\n"
-		     << "\x1B[1;97m" << "\n\t5. SALIR" << "\x1B[m"<< "\n"
+		cout << "\x1B[31m" << "\n\t\tBIENVENIDO, " << usuario1.nombre << "\x1B[m \n"
+		     << "\x1B[94m" << "\n\tMENU" << "\x1B[m \n"
+		     << "\x1B[96m" << "\n\t1. Catalogo" << "\x1B[m"<< "\n"
+		     << "\x1B[96m" << "\n\t2. Pedidos" << "\x1B[m"<< "\n"
+		     << "\x1B[96m" << "\n\t3. Canales de venta" << "\x1B[m"<< "\n"
+             << "\x1B[96m" << "\n\t4. FUNCIONES ADMIN" << "\x1B[m"<< "\n"
+		     << "\x1B[96m" << "\n\t5. SALIR" << "\x1B[m"<< "\n"
 		     << "\x1B[1;97m" << "\n\tEscoger Opcion: " << "\x1B[m";
 		cin >> opcion;
 			
-		if (cin.fail() || !(opcion >= 1 && opcion <= 5)) { //comprabacion de erroes
+		if (cin.fail() || !(opcion >= 1 && opcion <= 5)) {
 				error_valor();
 		} else {
 		    switch (opcion){
@@ -66,10 +67,10 @@ void InterfazAdmin::funciones_admin(){
     do {
         system("cls");
         cout << "\n\tFUNCIONES ADMIN\n"
-             << "\x1B[34m" << "\n\t1. Editar catalogo 'HAS'" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t2. Editar catalogo 'vivo'" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t3. Editar canales Venta" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t4. Regresar al Menu" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t1. Editar catalogo 'HAS'" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t2. Editar catalogo 'vivo'" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t3. Editar canales Venta" << "\x1B[m" << "\n"
+             << "\x1B[94m" << "\n\t4. Regresar al Menu" << "\x1B[m" << "\n"
              << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
         cin >> op;
         if (std::cin.fail() || !(op >= 1 && op <= 4)) {
@@ -78,17 +79,17 @@ void InterfazAdmin::funciones_admin(){
             switch (op) {
             case 1:
                 system("cls");
-                cout << "\x1B[34m" << "\n\tCATALOGO HAS" << "\x1B[m" << "\n\n";
+                cout << "\x1B[94m" << "\n\tCATALOGO HAS" << "\x1B[m" << "\n\n";
                 retro = false;
                 lista_has.print_lista();
-                editar_catalogo(lista_has);
+                editar_catalogo(lista_has,op);
                 break;
             case 2:
                 system("cls");
-                cout << "\x1B[34m" << "\n\tCATALOGO VIVO" << "\x1B[m" << "\n\n";
+                cout << "\x1B[94m" << "\n\tCATALOGO VIVO" << "\x1B[m" << "\n\n";
                 retro = false;
                 lista_viv.print_lista();
-                editar_catalogo(lista_viv);
+                editar_catalogo(lista_viv,op);
                 break;
             case 3:
                 retro = false;
@@ -104,17 +105,17 @@ void InterfazAdmin::funciones_admin(){
         }
     } while (retro);
 }
-void InterfazAdmin::editar_catalogo(Listas& lista){
+void InterfazAdmin::editar_catalogo(Listas& lista, int op2){
     int op;
     int index;
     bool retro = true;
     bool retro1 = true;
     do {
-        cout << "\x1B[34m" << "\n\t1. Editar elemento" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t2. Eliminar elemento" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t3. Regresar a Funciones Admin" << "\x1B[m" << "\n"
-             << "\x1B[34m" << "\n\t4. Regresar al Menu" << "\x1B[m" << "\n"
-             << "\x1B[37m" << "\n\tEscoger Opcion: " << "\x1B[m";
+        cout << "\x1B[94m"  << "\n\t1. Editar elemento" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t2. Eliminar elemento" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t3. Regresar a Funciones Admin" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\t4. Regresar al Menu" << "\x1B[m" << "\n"
+             << "\x1B[94m"  << "\n\tEscoger Opcion: " << "\x1B[m";
         cin >> op;
         if (cin.fail() || !(op >= 1 && op <= 4)) {
             error_valor();
@@ -124,7 +125,7 @@ void InterfazAdmin::editar_catalogo(Listas& lista){
                 retro = false;
                 cout << "\n\nIngrese el indice del producto que desea editar: " << endl;
                 do {
-                    cout << "\x1B[34m" << "\n\t0. para volver" << "\x1B[m" << "\n";
+                    cout << "\x1B[94m"  << "\n\t0. para volver" << "\x1B[m" << "\n";
                     cin >> index;
                     if (cin.fail() || !(index >= 0 && index <= lista.get_tamano_lista())) {
                         error_valor();
@@ -134,16 +135,16 @@ void InterfazAdmin::editar_catalogo(Listas& lista){
                             system("cls");
                             funciones_admin();
                         } else {
-                            cout << "\naqui se implementara la edicion xd\n";                 
+                            editar_lista(index,op2 );                 
                         }
                     }
                 }while (retro1);
                 break;
             case 2:
                 retro = false;
-                cout << "\n\nIngrese el indice del producto que desea eliminar: " << endl;
+                cout << "\x1B[94m" << "\n\nIngrese el indice del producto que desea eliminar: "<< "\x1B[m" << endl;
                 do {
-                    cout << "\x1B[34m" << "\n\t0. para volver" << "\x1B[m" << "\n";
+                    cout << "\x1B[94m" << "\n\t0. para volver" << "\x1B[m" << "\n";
                     cin >> index;
                     if (cin.fail() || !(index >= 0 && index <= lista.get_tamano_lista())) {
                         error_valor();
@@ -153,7 +154,7 @@ void InterfazAdmin::editar_catalogo(Listas& lista){
                             system("cls");
                             funciones_admin();
                         } else {
-                            cout << "\naqui se implementara la eliminacion xd\n";                 
+                            editar_eliminar( index,op2);               
                         }
                     }
                 }while (retro1);
@@ -256,4 +257,171 @@ void InterfazAdmin::editar_canales(){
             }
         }
     } while (retro);
+}
+
+void InterfazAdmin::editar_lista(int index, int op2){
+			char codigoISBN[13];
+			char nombreLibro[38];
+			char descripcionLib[22];
+			char nivel[10];
+			int grado;
+			char area[22];
+			float precio;
+			int stock;
+	if (op2==1){
+			cout<<"Ingresa los datos\n";
+			cout << "Escriba ISBN\n-  ";
+			cin>>codigoISBN;
+			cout<< " Escriba TITULO\n-  ";
+			cin>>nombreLibro;
+			cout<< " Escriba DESCRIPCION\n-  ";
+			cin>>descripcionLib;
+			cout<< " Escriba NIVEL\n-  ";
+			cin>>nivel;
+			cout<< " Escriba GRADO\n-  ";
+			cin >> grado;
+			cout<< " Escriba AREA\n-  ";
+			cin>>area;
+			cout<< " Escriba PRECIO\n-  ";
+			cin >> precio;
+			cout<< " Escriba STOCK\n-  ";
+			cin >> stock;
+			lista_has.array_libros_lista[index-1].setCodigoISBN(codigoISBN);
+			lista_has.array_libros_lista[index-1].setNombreLibro(nombreLibro);
+			lista_has.array_libros_lista[index-1].setDescripcionLib(descripcionLib);
+			lista_has.array_libros_lista[index-1].setNivel(nivel);
+			lista_has.array_libros_lista[index-1].setGrado(grado);
+			lista_has.array_libros_lista[index-1].setArea(area);
+			lista_has.array_libros_lista[index-1].setPrecio(precio);
+			lista_has.array_libros_lista[index-1].setStock(stock);
+			
+			int maximon= 45;
+			ofstream archivocam("../src/Project_0014/data_has.txt");
+			for (int i{0}; i<maximon; i++)
+			{
+				archivocam<<
+					lista_has.array_libros_lista[i].getCodigoISBN()<<","<<
+					lista_has.array_libros_lista[i].getNombreLibro()<<","<<
+					lista_has.array_libros_lista[i].getDescripcionLib()<<","<<
+					lista_has.array_libros_lista[i].getNivel()<<","<<
+					lista_has.array_libros_lista[i].getGrado()<<","<<
+					lista_has.array_libros_lista[i].getArea()<<","<<
+					lista_has.array_libros_lista[i].getPrecio()<<","<<
+					lista_has.array_libros_lista[i].getStock();
+				if(i<(maximon-1))
+				{
+					archivocam<<"\n";
+				}
+			}
+	}else if(op2==2){
+			cout<<"Ingresa los datos\n";
+
+			cout << "Escriba ISBN\n-  ";
+			cin>>codigoISBN;
+			cout<< " Escriba TITULO\n-  ";
+			cin>>nombreLibro;
+			cout<< " Escriba DESCRIPCION\n-  ";
+			cin>>descripcionLib;
+			cout<< " Escriba NIVEL\n-  ";
+			cin>>nivel;
+			cout<< " Escriba GRADO\n-  ";
+			cin >> grado;
+			cout<< " Escriba AREA\n-  ";
+			cin>>area;
+			cout<< " Escriba PRECIO\n-  ";
+			cin >> precio;
+			cout<< " Escriba STOCK\n-  ";
+			cin >> stock;
+			lista_viv.array_libros_lista[index-1].setCodigoISBN(codigoISBN);
+			lista_viv.array_libros_lista[index-1].setNombreLibro(nombreLibro);
+			lista_viv.array_libros_lista[index-1].setDescripcionLib(descripcionLib);
+			lista_viv.array_libros_lista[index-1].setNivel(nivel);
+			lista_viv.array_libros_lista[index-1].setGrado(grado);
+			lista_viv.array_libros_lista[index-1].setArea(area);
+			lista_viv.array_libros_lista[index-1].setPrecio(precio);
+			lista_viv.array_libros_lista[index-1].setStock(stock);
+			
+			int maximov=80;
+			ofstream archivocamv("../src/Project_0014/data_viv.txt");
+			for (int i{0}; i<maximov; i++)
+			{
+				archivocamv<<
+					lista_viv.array_libros_lista[i].getCodigoISBN()<<","<<
+					lista_viv.array_libros_lista[i].getNombreLibro()<<","<<
+					lista_viv.array_libros_lista[i].getDescripcionLib()<<","<<
+					lista_viv.array_libros_lista[i].getNivel()<<","<<
+					lista_viv.array_libros_lista[i].getGrado()<<","<<
+					lista_viv.array_libros_lista[i].getArea()<<","<<
+					lista_viv.array_libros_lista[i].getPrecio()<<","<<
+					lista_viv.array_libros_lista[i].getStock();
+				if(i<(maximov-1))
+				{
+					archivocamv<<"\n";
+				}
+			}
+	}
+	
+
+}	
+void InterfazAdmin::editar_eliminar(int index, int op2){
+	if(op2==1){
+			int s;
+			cout<<"Desea eliminar este objeto?\n1.s\n2.n\n";
+			cin>>s;
+			if (std::cin.fail() || !(s >= 1 && s <= 2)) {
+				error_valor();
+			}else{
+				if(s==1){
+						lista_has.array_libros_lista[index-1].setPrintot(false);
+				}
+			}
+			int maximon=45;
+			ofstream archivocam("../src/Project_0014/data_has.txt");
+			for (int i{0}; i<maximon; i++)
+			{
+				if (lista_has.array_libros_lista[i].getPrintot()){
+				archivocam<<
+					lista_has.array_libros_lista[i].getCodigoISBN()<<","<<
+					lista_has.array_libros_lista[i].getNombreLibro()<<","<<
+					lista_has.array_libros_lista[i].getDescripcionLib()<<","<<
+					lista_has.array_libros_lista[i].getNivel()<<","<<
+					lista_has.array_libros_lista[i].getGrado()<<","<<
+					lista_has.array_libros_lista[i].getArea()<<","<<
+					lista_has.array_libros_lista[i].getPrecio()<<","<<
+					lista_has.array_libros_lista[i].getStock();
+				
+				}else{
+				continue;}
+			}
+	}else if(op2==2){
+			int s2;
+			cout<<"Desea eliminar este objeto?\n1.s\n2.n\n";
+			cin>>s2;
+			if (std::cin.fail() || !(s2 >= 1 && s2 <= 2)) {
+				error_valor();
+			}else{
+				if(s2==1){
+						lista_viv.array_libros_lista[index-1].setPrintot(false);
+				}
+			}
+			int maximov=45;
+			ofstream archivocamv("../src/Project_0014/data_viv.txt");
+			for (int i{0}; i<maximov; i++)
+			{
+				if (lista_viv.array_libros_lista[i].getPrintot()){
+				archivocamv<<
+					lista_viv.array_libros_lista[i].getCodigoISBN()<<","<<
+					lista_viv.array_libros_lista[i].getNombreLibro()<<","<<
+					lista_viv.array_libros_lista[i].getDescripcionLib()<<","<<
+					lista_viv.array_libros_lista[i].getNivel()<<","<<
+					lista_viv.array_libros_lista[i].getGrado()<<","<<
+					lista_viv.array_libros_lista[i].getArea()<<","<<
+					lista_viv.array_libros_lista[i].getPrecio()<<","<<
+					lista_viv.array_libros_lista[i].getStock();
+				 
+				}else{
+				continue;}
+			}
+	}
+	
 }

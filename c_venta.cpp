@@ -49,7 +49,7 @@ void Venta::insertar_producto(VentaProducto& nuevo_producto) {
    delete [] temp_array;
 }
 void Venta::setArray_productos() {
-   ifstream archivo("../src/Project_0013/data_ped.txt", ios::in);
+   ifstream archivo("../src/Project_0014/data_ped.txt", ios::in);
    int contador;
    array_productos = new VentaProducto[tamaño_array];
    if (!archivo) {
@@ -83,14 +83,14 @@ void Venta::setArray_productos() {
          
       } else if (l_valores.size() == 1) {
          cantidad_total = stoi(l_valores[0]);
-      } else if (l_valores.size() == 3){
-         cerr << "ultima linea xd" << line << endl;
+      } else if (l_valores.size() == 7){
+         //cerr << "ultima linea xd" << line << endl;
          nombre_cliente = l_valores[4].c_str();
          direccion = l_valores[2].c_str();
          telefono = stod(l_valores[5]);
          ruc = stod(l_valores[6]);
       } else {
-         cerr << "linea no valida xd" << line << endl;
+         //cerr << "linea no valida xd" << line << endl;
       }
       contador++;
    }

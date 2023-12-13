@@ -2,7 +2,7 @@
 # Initialization
 #############################################################
 
-project( C++_Proj_0013 )
+project( C++_Proj_0014 )
 
 message( "Source of application:  ${CMAKE_SOURCE_DIR} " )
 message( "Subproject name:  ${PROJECT_NAME} " )

@@ -1,45 +1,45 @@
 1134567890123,has Holaa.,Lib. Act.,Primaria,1,Matematica,69.9,2349
-2345678901234,Ciencias Naturales - Aprendemos,Lib. Tex.,Primaria,2,Ciencias Naturales,150.0,1357
+2345678901234,Ciencias Naturales - Aprendemos,Lib. Tex.,Primaria,2,Ciencias Naturales,150,1357
 3456789012345,Lenguaje - Saber C.,Lib. Tex.,Secundaria,3,Lenguaje,129.5,1132
-4567890123456,Geografia - Aprendemos,Pack,Primaria,4,Geografia,60.0,1598
+4567890123456,Geografia - Aprendemos,Pack,Primaria,4,Geografia,60,1598
 5678901234567,Ciencias Naturales - Crecemos J.,Pack,Secundaria,5,Ciencias Naturales,99.9,1783
 6789012345678,Lenguaje - Estudio D.,Pack,Secundaria,4,Lenguaje,118.5,2281
 7890123456789,Ciencias Naturales - Saber C.,Lib. Act.,Secundaria,3,Ciencias Naturales,39.9,315
 8901234567890,Lenguaje - Aprendemos,Lib. Act.,Secundaria,2,Lenguaje,92.5,423
-9012345678901,Geografia - Saber C.,Pack,Primaria,1,Geografia,145.0,1529
+9012345678901,Geografia - Saber C.,Pack,Primaria,1,Geografia,145,1529
 6323456789012,Matematica - Estudio D.,Lib. Tex.,Primaria,4,Matematica,122.9,1759
-1230123012301,Geografia - Crecemos J.,Pack,Secundaria,5,Geografia,115.0,2385
+1230123012301,Geografia - Crecemos J.,Pack,Secundaria,5,Geografia,115,2385
 5678012304567,Lenguaje - Aprendemos,Lib. Tex.,Primaria,3,Lenguaje,99.9,1081
-2345670123012,Matematica - Aprendemos,Pack,Secundaria,1,Matematica,123.0,2075
+2345670123012,Matematica - Aprendemos,Pack,Secundaria,1,Matematica,123,2075
 1234568901345,Ciencias Naturales - Crecemos J.,Lib. Tex.,Secundaria,2,Ciencias Naturales,75.5,1046
-6789012345032,Lenguaje - Saber C.,Pack,Primaria,4,Lenguaje,95.0,1590
-5432109654321,Matematica - Estudio D.,Pack,Primaria,5,Matematica,102.0,1732
-2345123401234,Ciencias Naturales - Saber C.,Lib. Act.,Primaria,4,Ciencias Naturales,69.0,1980
-9012345690123,Geografia - Aprendemos,Lib. Tex.,Secundaria,3,Geografia,76.0,1947
+6789012345032,Lenguaje - Saber C.,Pack,Primaria,4,Lenguaje,95,1590
+5432109654321,Matematica - Estudio D.,Pack,Primaria,5,Matematica,102,1732
+2345123401234,Ciencias Naturales - Saber C.,Lib. Act.,Primaria,4,Ciencias Naturales,69,1980
+9012345690123,Geografia - Aprendemos,Lib. Tex.,Secundaria,3,Geografia,76,1947
 4567812304567,Lenguaje - Crecemos J.,Lib. Act.,Secundaria,2,Lenguaje,124.9,1122
-1230456789012,Matematica - Crecemos J.,Lib. Act.,Primaria,1,Matematica,64.5,2267
-5432109876543,Ciencias Naturales - Aprendemos,Pack,Secundaria,5,Ciencias Naturales,129.0,1776
-2345123401234,Lenguaje - Estudio D.,Lib. Tex.,Primaria,4,Lenguaje,87.0,1175
-7890123456098,Geografia - Saber C.,Pack,Secundaria,3,Geografia,60.0,1839
-4567812304512,Matematica - Estudio D.,Lib. Act.,Primaria,5,Matematica,130.0,2352
-9012345690876,Ciencias Naturales - Saber C.,Pack,Secundaria,1,Ciencias Naturales,72.0,1096
-5432165987654,Lenguaje - Aprendemos,Lib. Act.,Secundaria,4,Lenguaje,139.0,1591
+1234567899999,Geografia,-,5,2,Geografia,789,4561
+5432109876543,Ciencias Naturales - Aprendemos,Pack,Secundaria,5,Ciencias Naturales,129,1776
+2345123401234,Lenguaje - Estudio D.,Lib. Tex.,Primaria,4,Lenguaje,87,1175
+7890123456098,Geografia - Saber C.,Pack,Secundaria,3,Geografia,60,1839
+4567812304512,Matematica - Estudio D.,Lib. Act.,Primaria,5,Matematica,130,2352
+9012345690876,Ciencias Naturales - Saber C.,Pack,Secundaria,1,Ciencias Naturales,72,1096
+5432165987654,Lenguaje - Aprendemos,Lib. Act.,Secundaria,4,Lenguaje,139,1591
 9123456789965,Geografia - Crecemos J.,Lib. Tex.,Primaria,2,Geografia,87.5,2437
 2345123456789,Matematica - Aprendemos,Pack,Primaria,3,Matematica,96.9,1067
-7890123456012,Ciencias Naturales - Aprendemos,Lib. Act.,Secundaria,2,Ciencias Naturales,92.0,2367
+7890123456012,Ciencias Naturales - Aprendemos,Lib. Act.,Secundaria,2,Ciencias Naturales,92,2367
 1230456789678,Lenguaje - Estudio D.,Pack,Secundaria,1,Lenguaje,107.5,1534
-5678109876543,Matematica - Crecemos J.,Lib. Act.,Secundaria,4,Matematica,109.0,1629
+5678109876543,Matematica - Crecemos J.,Lib. Act.,Secundaria,4,Matematica,109,1629
 2345123490123,Ciencias Naturales - Saber C.,Lib. Act.,Secundaria,5,Ciencias Naturales,52.9,2282
-9012345690123,Lenguaje - Saber C.,Lib. Tex.,Primaria,4,Lenguaje,111.0,2472
-4567812301234,Geografia - Aprendemos,Pack,Secundaria,3,Geografia,104.0,1196
-5432109876987,Matematica - Estudio D.,Lib. Act.,Secundaria,2,Matematica,69.0,1454
+9012345690123,Lenguaje - Saber C.,Lib. Tex.,Primaria,4,Lenguaje,111,2472
+4567812301234,Geografia - Aprendemos,Pack,Secundaria,3,Geografia,104,1196
+5432109876987,Matematica - Estudio D.,Lib. Act.,Secundaria,2,Matematica,69,1454
 2345123456781,Ciencias Naturales - Crecemos J.,Lib. Act.,Primaria,1,Ciencias Naturales,115.5,2045
-7890123456786,Lenguaje - Aprendemos,Pack,Primaria,2,Lenguaje,108.0,1795
+7890123456786,Lenguaje - Aprendemos,Pack,Primaria,2,Lenguaje,108,1795
 9012345690122,Geografia - Saber C.,Lib. Act.,Primaria,3,Geografia,65.5,1177
-5432109876549,Matematica - Crecemos J.,Lib. Act.,Secundaria,4,Matematica,59.0,1904
-2345123490126,Ciencias Naturales - Aprendemos,Lib. Tex.,Primaria,5,Ciencias Naturales,97.0,1067
-7890123456012,Lenguaje - Estudio D.,Pack,Secundaria,1,Lenguaje,120.0,2291
-9012345690123,Matematica - Saber C.,Pack,Secundaria,2,Matematica,103.0,2398
+5432109876549,Matematica - Crecemos J.,Lib. Act.,Secundaria,4,Matematica,59,1904
+2345123490126,Ciencias Naturales - Aprendemos,Lib. Tex.,Primaria,5,Ciencias Naturales,97,1067
+7890123456012,Lenguaje - Estudio D.,Pack,Secundaria,1,Lenguaje,120,2291
+9012345690123,Matematica - Saber C.,Pack,Secundaria,2,Matematica,103,2398
 2345123490123,Ciencias Naturales - Crecemos J.,Lib. Tex.,Secundaria,3,Ciencias Naturales,105.9,1077
-7890123456789,Lenguaje - Aprendemos,Pack,Primaria,4,Lenguaje,129.0,2457
+7890123456789,Lenguaje - Aprendemos,Pack,Primaria,4,Lenguaje,129,2457
 5678109876543,Geografia - Aprendemos,Lib. Act.,Primaria,5,Geografia,71.9,1445

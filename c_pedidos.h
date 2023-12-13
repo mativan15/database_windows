@@ -3,8 +3,6 @@
 #include "c_producto.h"
 #include "c_listas.h"
 #include "c_usuario.h"
-//#include "clase_catalogo.h"
-//#include "clase_canales_v.h"
 #ifndef C_PEDIDOS_H
 #define C_PEDIDOS_H
 class Catalogo;
@@ -30,7 +28,6 @@ private:
 public:
     Pedido();
     Pedido(Listas& lista_has,Listas& lista_viv,Usuario& usuario1);
-    /*Pedido(const Pedido& copy);*/
     ~Pedido();
     void tab_pedido();
     void setCatalogo(Catalogo* cat_ptr);

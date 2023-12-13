@@ -10,12 +10,13 @@
 using namespace std;
 class CanalesV;
 class Catalogo {
-public:
+private:
 	Pedido* PedidoPtr;	
+	CanalesV* canalesPtr;
 	Listas lista_has;
 	Listas lista_viv;
 	Usuario usuario1;
-	CanalesV* canalesPtr;
+public:
 	Listas productos_anadidos;
 	Catalogo();
 	Catalogo(Listas& lista_has,Listas& lista_viv,Usuario& usuario1);
@@ -25,5 +26,4 @@ public:
 	void print_catalogo(Listas& array_catalogo);
 	void filtrar_producto(int tipo);
 };
-
 #endif

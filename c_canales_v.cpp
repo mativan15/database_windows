@@ -10,7 +10,7 @@
 #include "c_boleta.h"
 #include "c_factura.h"
 using namespace std;
-CanalesV::CanalesV() {//este no xd
+CanalesV::CanalesV() {
 	cerr << "\nconstructor nulo invocado en canalesV\n";
 	PedidoPtr = nullptr;
     lista_has = Listas();
@@ -19,7 +19,7 @@ CanalesV::CanalesV() {//este no xd
 	catalogoPtr = nullptr;
 	ventaPtr = nullptr;
 	bof = false;
-	cant_total = 100;//incompletoo
+	cant_total = 100;
 }
 
 CanalesV::CanalesV(Listas& lista_has, Listas& lista_viv, Usuario& usuario1) {
@@ -71,17 +71,18 @@ void CanalesV::tab_canales() {
 	set_cant_total(PedidoPtr->get_cantidad_tot());
 	system("cls");
 	do{
-		cout << "\x1B[33;5;88m" << "\nLa cantidad total por vender es: " << cant_total << "\n"
-		<< "\n\tIngrese canal de venta" << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t1. Libreria: " << cant_lib <<"\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t2. E-commerce: " << cant_eco << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t3. Feria: " << cant_fer << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t4. Distribuidor: " << cant_dis << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\tO escoja una opcion:" << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t5. Generar comprobante" << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t6. Regresar a Pedidos" << "\x1B[m"<< "\n"
-		<< "\x1B[33;5;88m" << "\n\t7. Regresar al Menu" << "\x1B[m"<< "\n"
-		<< "\x1B[38;5;46m" << "\n\tEscoger Opcion: " << "\x1B[m";
+		cout << "\x1B[31m"<< "\n\tCANALES DE VENTA\n"<< "\x1B[m"
+		<< "\x1B[92m" << "\nLa cantidad total por vender es: " << cant_total << "\n"
+		<< "\x1B[94m" << "\n\tIngrese canal de venta" << "\x1B[m"<< "\n"
+		<< "\x1B[96m" << "\n\t1. Libreria: " << cant_lib <<"\x1B[m"<< "\n"
+		<< "\x1B[96m" << "\n\t2. E-commerce: " << cant_eco << "\x1B[m"<< "\n"
+		<< "\x1B[96m" << "\n\t3. Feria: " << cant_fer << "\x1B[m"<< "\n"
+		<< "\x1B[96m" << "\n\t4. Distribuidor: " << cant_dis << "\x1B[m"<< "\n"
+		<< "\x1B[94m" << "\n\tO escoja una opcion:" << "\x1B[m"<< "\n"
+		<< "\x1B[94m" << "\n\t5. Generar comprobante" << "\x1B[m"<< "\n"
+		<< "\x1B[94m" << "\n\t6. Regresar a Pedidos" << "\x1B[m"<< "\n"
+		<< "\x1B[94m" << "\n\t7. Regresar al Menu" << "\x1B[m"<< "\n"
+		<< "\x1B[94m" << "\n\tEscoger Opcion: " << "\x1B[m";
 		cin >> op;
 		if (std::cin.fail() || !(op >= 1 && op <=7)){
 			error_valor();
@@ -125,10 +126,9 @@ void CanalesV::tab_canales() {
 				break;
 			case 5: 
 				f_bof();
-				//ventaPtr->insertar_producto()
 				retro=false;
 				ventaPtr->print_comprobante();
-				cout << "\x1B[34m" << "\nPedido Finalizado con exito\nPresione 1 para salir al menu:" << "\x1B[m"<< "\n\n";
+				cout << "\x1B[96m" << "\nPedido Finalizado con exito\nPresione 1 para salir al menu:" << "\x1B[m"<< "\n\n";
 				do {
 					int o;
 					cin >> o;
@@ -157,19 +157,19 @@ void CanalesV::f_bof(){
 	do {
 		int op_bof;
 		system("cls");
-		cout<<"\t\tCANALES DE VENTA\n"
-			<< "\nDesea \n1.boleta  \n2:factura \nEscoger: ";
+		cout<<"\x1B[32m"<<"\n\t\t\t\tCANALES DE VENTA\n"<<"\x1B[0m"<<"\x1B[96m"
+			<< "\n\tDESEA: \n\t1.BOLETA  \n\t2:FACTURA \n\n\tESCOGER: "<<"\x1B[0m";
 		cin>> op_bof;
 		if (std::cin.fail() || !(op_bof >= 1 && op_bof <=2)){
 			error_valor();
 		}else{
-			if (op_bof==1){//boleta
+			if (op_bof==1){
 				Boleta* boleta1 = new Boleta();
 				system("cls");
-				cout<<" \tBOLETA\n";
+				cout<<"\x1B[91m"<<" \n\t\t\t\tBOLETA\n"<<"\x1B[0m";
 				do {
 					int num_bs;
-					cout << "\n\t- Ingrese el numero de boleta:\n";
+					cout <<"\x1B[96m"<< "\n\t- INGRESE EL NUMERO DE BOLETA:\n\t"<<"\x1B[0m";
 					cin >> num_bs;
 					boleta1->setNumero_boleta(num_bs);
 					if (cin.fail()) {
@@ -180,10 +180,9 @@ void CanalesV::f_bof(){
 				} while (true);
 				do {
 					int dni;
-					cout << "\n\t- Ingrese el numero de DNI:\n";
+					cout <<"\x1B[96m"<< "\n\t- INGRESE EL NUMERO DE DNI:\n\t"<<"\x1B[0m";
 					cin >> dni;
 					boleta1->setdni(dni);
-					//setdni(dnI);
 					if (cin.fail()) {
 						error_valor();
 					} else {
@@ -191,13 +190,13 @@ void CanalesV::f_bof(){
 					}
 				} while (true);
 				ventaPtr = boleta1;
-			}else{//factura
+			}else{
 				Factura* factura1 = new Factura();
 				system("cls");
-				cout<<" \t\tFactura\n";
+				cout<<"\x1B[91m"<<" \n\t\t\t\tFACTURA\n"<<"\x1B[0m";
 				do {
 					int num_bs;
-					cout << "\n\t- Ingrese el numero de boleta:\n";
+					cout <<"\x1B[96m"<< "\n\t- INGRESE EL NUMERO DE FACTURA:\n\t"<<"\x1B[0m";
 					cin >> num_bs;
 					factura1->setNumero_factura(num_bs);
 					if (cin.fail()) {
@@ -208,7 +207,7 @@ void CanalesV::f_bof(){
 				} while (true);
 				do {
 					char razon_s[50];
-					cout << "\n\t- Ingrese la razon social:\n";
+					cout <<"\x1B[96m"<< "\n\t- INGRESE LA RAZON SOCIAL:\n\t"<<"\x1B[0m";
 					cin >> razon_s;
 					factura1->setRazon_social(razon_s);
 					if (cin.fail()) {

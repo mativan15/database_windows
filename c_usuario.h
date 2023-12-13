@@ -1,7 +1,5 @@
 //clase_Usuario.h
 #include <iostream>
-
-
 #ifndef C_USUARIO_H
 #define C_USUARIO_H
 using namespace std;

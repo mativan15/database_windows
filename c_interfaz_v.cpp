@@ -11,6 +11,6 @@ InterfazVendedor::InterfazVendedor(Catalogo& catalogo1, Pedido& pedido, CanalesV
 }
 
 void InterfazVendedor::menu() {
-    cout << "\x1B[1;97m" << "\n\t\t\t\t\t\tVENDEDOR MODE" << "\x1B[m \n";
+    cout << "\x1B[31m" << "\n\t\t\t\t\t\tVENDEDOR MODE" << "\x1B[m \n";
     Interfaz::menu();
 }

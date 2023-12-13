@@ -6,15 +6,15 @@ VentaProducto::VentaProducto() : Producto() {
     subtotal = 0;
 }
 VentaProducto::VentaProducto(int cant_l, const char* nom_l, float prec_l) : Producto() {// este
-    cerr << "VentaProducto constructor lleno:" << endl;
+   // cerr << "VentaProducto constructor lleno:" << endl;
     cantidad = cant_l;
     subtotal = prec_l*cant_l;
     setNombreLibro(nom_l);
     setPrecio(prec_l);
-    cerr << cantidad << "\n" << subtotal << "\n" << precio << endl;
+    //cerr << cantidad << "\n" << subtotal << "\n" << precio << endl;
 }
 VentaProducto::VentaProducto(const VentaProducto& ventaProductocopia) : Producto(ventaProductocopia) {
-    cerr << "VentaProducto constructor copiado" << endl;
+    //cerr << "VentaProducto constructor copiado" << endl;
     cantidad = ventaProductocopia.cantidad;
     subtotal = ventaProductocopia.subtotal;
 }

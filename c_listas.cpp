@@ -20,9 +20,9 @@ Listas::Listas(int tipo) {
     this->tipo = tipo;
     ifstream archivo;
     if (tipo==1){
-        archivo.open("../src/Project_0013/data_has.txt", ios::in);
+        archivo.open("../src/Project_0014/data_has.txt", ios::in);
     } else {
-        archivo.open("../src/Project_0013/data_viv.txt", ios::in);
+        archivo.open("../src/Project_0014/data_viv.txt", ios::in);
     }
     array_libros_lista = new Producto [tamano_lista];
     if (!archivo) {
@@ -56,7 +56,7 @@ Listas::Listas(int tipo) {
             for (int i = 0; i < tamano_lista - 1; i++) {
                 array_libros_lista[i] = temp_array[i];
             }
-            array_libros_lista[tamano_lista - 1] = Producto(cod, nom, descr, nivel, grado, area, precio, stock);
+            array_libros_lista[tamano_lista - 1] = Producto(cod, nom,true, descr, nivel, grado, area, precio, stock);
             delete [] temp_array;
             
         } else {
@@ -68,7 +68,7 @@ Listas::Listas(int tipo) {
 }
     
 Listas::~Listas() {
-    cerr << "destructor de clase_listas" << endl;
+    //cerr << "destructor de clase_listas" << endl;
     if (array_libros_lista!= nullptr){
         delete [] array_libros_lista;
         array_libros_lista = nullptr;
@@ -77,17 +77,15 @@ Listas::~Listas() {
 void Listas::print_lista(){
     cout << "\t" << left << setw(8) << "Index" << left << setw(18) << "ISBN" << left << setw(38) << "Titulo" << left << setw(20) << "Descripcion" << left << setw(15) << "Nivel" << left << setw(12) << "Grado" << left << setw(22) << "Area"   << left << setw(12) << "Precio" << left << setw(8) << "Stock" << endl;
     for (int i = 0; i < tamano_lista; i++){
-        cout << "\t" << left << setw(8) << i+1 
-             << left << setw(18) << array_libros_lista[i].getCodigoISBN()
-             << left << setw(38) << array_libros_lista[i].getNombreLibro()
-             << left << setw(20) << array_libros_lista[i].getDescripcionLib() 
-             << left << setw(15) << array_libros_lista[i].getNivel()
-             << left << setw(12) << array_libros_lista[i].getGrado()
-             << left << setw(22) << array_libros_lista[i].getArea()
-             << left << setw(12) << array_libros_lista[i].getPrecio()
-             << left << setw(8) << array_libros_lista[i].getStock() << endl;
+        if(array_libros_lista[i].getPrintot()){
+            cout << "\t" << left << setw(8) << i+1 << array_libros_lista[i];
+		}else{
+			continue;
+		}
     }
 }
+
+
 int Listas::get_tamano_lista(){
     return tamano_lista;
 }
